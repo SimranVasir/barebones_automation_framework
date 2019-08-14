@@ -3,6 +3,6 @@
 1. Install 'Cucumber for Java' plugin
 
 1. If you cannot navigate from .feature files to step definition files.
-        a. Check if you have the Substeps plugin in IntelliJ. If yes, uninstall it since Cucumber for java plugin does not work along with Substeps plugin
+        a. Check if you have the Substeps plugin in IntelliJ. If yes, uninstall it since 'Cucumber for Java' plugin does not work along with Substeps plugin
         b. Go to Settings -> Editor -> File Types -> Cucumber Scenario. Then add "*.feature" to the registered patterns
         c. If everthing worked, Intellij will recognize the feature files and there will be a green icon beside the feature files names in project directory
