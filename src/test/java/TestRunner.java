@@ -13,11 +13,11 @@ import org.testng.annotations.Test;
         tags = {"~@Ignore"},
         plugin = {
                 "pretty",
-                "html:target/cucumber-reports/cucumber" +
-                        "-pretty",
+                "html:target/cucumber-reports/cucumber",
                 "json:target/cucumber-reports/CucumberTestReport.json",
                 "rerun:target/cucumber-reports/rerun.txt"
-        })
+        }
+)
 public class TestRunner {
     private TestNGCucumberRunner testNGCucumberRunner;
 
