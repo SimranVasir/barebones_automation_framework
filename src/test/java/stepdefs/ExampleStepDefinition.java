@@ -1,9 +1,7 @@
 package stepdefs;
 
 import cucumber.api.PendingException;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import cucumber.api.java.en.*;
 import org.testng.Assert;
 
 public class ExampleStepDefinition {
@@ -14,15 +12,13 @@ public class ExampleStepDefinition {
 
     @When("I fill in {word} blah {word} with blah")
     public void i_fill_in_with(String arg1, String arg2) throws Throwable {
-        Assert.assertEquals(9, 8, "I fill in");
+        Assert.assertEquals(9, 9, "I fill in");
 
-        throw new PendingException();
     }
 
     @When("^I click on the \"([^\"]*)\" button$")
     public void i_click_on_the_button(String arg1) throws Throwable {
         Assert.assertEquals("blah", "blah");
-        throw new PendingException();
     }
 
     @Then("^I should see \"([^\"]*)\" message$")

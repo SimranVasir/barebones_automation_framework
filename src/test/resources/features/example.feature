@@ -5,7 +5,7 @@ Feature: Example feature
 
  Scenario: example scenario
  Given I am on the something page on URL
- When I fill in blah with blah
+ When I fill in something blah something with blah
 
 
 # Scenario Outline: title

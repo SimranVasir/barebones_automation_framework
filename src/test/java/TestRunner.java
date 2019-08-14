@@ -1,6 +1,7 @@
 import cucumber.api.CucumberOptions;
-import cucumber.api.testng.TestNGCucumberRunner;
 import cucumber.api.testng.CucumberFeatureWrapper;
+import cucumber.api.testng.PickleEventWrapper;
+import cucumber.api.testng.TestNGCucumberRunner;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -25,14 +26,14 @@ public class TestRunner {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     }
 
-    @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "features")
-    public void feature(CucumberFeatureWrapper cucumberFeature) {
-        testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
+    @Test(groups = "Cucumber", description = "Runs Cucumber Feature", dataProvider = "scenarios")
+    public void scenario(PickleEventWrapper pickleEvent, CucumberFeatureWrapper cucumberFeature) throws Throwable {
+        testNGCucumberRunner.runScenario(pickleEvent.getPickleEvent());
     }
 
-    @DataProvider(name = "features", parallel=true)
+    @DataProvider(name = "scenarios", parallel = true)
     public Object[][] features() {
-        return testNGCucumberRunner.provideFeatures();
+        return testNGCucumberRunner.provideScenarios();
     }
 
     @AfterClass(alwaysRun = true)

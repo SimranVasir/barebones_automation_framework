@@ -1,6 +1,6 @@
 -----------------------Guide for setting up the project---------------------------
 
-1. Install cucumber for Java plugin
+1. Install 'Cucumber for Java' plugin
 
 1. If you cannot navigate from .feature files to step definition files.
         a. Check if you have the Substeps plugin in IntelliJ. If yes, uninstall it since Cucumber for java plugin does not work along with Substeps plugin
