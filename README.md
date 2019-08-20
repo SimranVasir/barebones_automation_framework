@@ -1,2 +1,2 @@
 # Salesforce-Test-Automation-Framework
-repo for automating UI functional tests using selenium
+repo for automating Salesforce UI functional tests using selenium
